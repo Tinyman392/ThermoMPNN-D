@@ -472,6 +472,7 @@ def check_df_size(size):
 
 
 def main(args):
+    torch.set_num_threads(args.threads)
     print('=' * 100)
     print(args)
     print('=' * 100)
@@ -576,4 +577,9 @@ if __name__ == "__main__":
         action="store_true",
         help="Add explicit disulfide breakage penalty. Default is False.",
     )
+    parser.add_argument(
+        "--threads",
+        type=int,
+        default=1,
+        help="Set the number of threads to run")
     main(parser.parse_args())
