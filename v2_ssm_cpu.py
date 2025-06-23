@@ -20,6 +20,7 @@ from thermompnn.ssm_utils import (
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
+os.environ["CUDA_VISIBLE_DEVICES"]=""
 
 def get_ssm_mutations_double(pdb, dthresh):
     # make mutation list for SSM run
