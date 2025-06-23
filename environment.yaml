@@ -18,11 +18,11 @@ dependencies:
   - mmseqs2
   - tqdm
   - pandas
-  - numpy
+  - numpy=1.26.4
   - omegaconf
   - python==3.10
   - joblib
-  - cudatoolkit=11.3
+  - cudatoolkit=11.7
   - scipy
   - scikit-learn
   - ipykernel
