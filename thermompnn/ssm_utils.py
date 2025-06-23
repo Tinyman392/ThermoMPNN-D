@@ -64,6 +64,7 @@ def get_config(mode):
         raise ValueError("Invalid mode selected!")
 
     config = OmegaConf.merge(OmegaConf.load(local), OmegaConf.load(aux))
+    config.platform.thermompnn_dir = current_location = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
     return parse_cfg(config)
 
